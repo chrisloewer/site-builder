@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0; }
+
+.splash-fullscreen {
+  position: relative;
+  height: 100vh;
+  text-align: center; }
+
+.vc-container {
+  overflow: hidden; }
+  .vc-container img.bg, .vc-container video.bg {
+    height: inherit;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: auto;
+    transform: translate(-50%, 0);
+    z-index: -1; }
+  .vc-container .vc-content {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 300px;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.vc-container::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+.section {
+  position: relative;
+  height: 500px;
+  text-align: center; }
+
+/*# sourceMappingURL=index.css.map */
