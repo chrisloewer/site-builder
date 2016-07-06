@@ -4,23 +4,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link type="text/css" rel="stylesheet" href="styles/index.css">
+    <script type="application/javascript" src="scripts/parallax.js"></script>
 
     <title>Site Builder</title>
   </head>
 
   <body>
-    <div class="splash-fullscreen vc-container">
-      <!--<img class="bg" src="resources/balloon-lake.jpg">-->
+    <div class="splash-fullscreen-fixed vc-container" id="parallax">
+      <img class="bg" src="resources/balloon-lake.jpg">
+      <!--<video muted loop autoplay class="bg">-->
+        <!--<source src="resources/clouds.mp4" type="video/mp4">-->
+      <!--</video>-->
 
       <div class="vc-content">
         FullScreen Splash
       </div>
     </div>
+    <div class="splash-fullscreen vc-container"></div>
 
     <div class="section vc-container">
-      <video muted loop autoplay class="bg">
-        <source src="resources/clouds.mp4" type="video/mp4">
-      </video>
+
 
       <div class="vc-content">
         Secondary content

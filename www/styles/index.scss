@@ -6,11 +6,20 @@ body {
   margin: 0;
 }
 
+.splash-fullscreen-fixed {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
 .splash-fullscreen {
   position: relative;
   height: 100vh;
+  width: 100%;
   text-align: center;
 }
+
 
 .vc-container {
   overflow: hidden;
@@ -46,5 +55,6 @@ body {
   position: relative;
   height: 500px;
   text-align: center;
+  background-color: $neutral;
 }
 
