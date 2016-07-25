@@ -94,3 +94,75 @@
     font-style: normal;
 
 }
+
+
+
+
+@font-face {
+    font-family: 'playfair_black';
+    src: url('playfairdisplay-black-webfont.woff2') format('woff2'),
+         url('playfairdisplay-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'playfair_black_italic';
+    src: url('playfairdisplay-blackitalic-webfont.woff2') format('woff2'),
+         url('playfairdisplay-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'playfair_bold';
+    src: url('playfairdisplay-bold-webfont.woff2') format('woff2'),
+         url('playfairdisplay-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'playfair_bold_italic';
+    src: url('playfairdisplay-bolditalic-webfont.woff2') format('woff2'),
+         url('playfairdisplay-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'playfair_italic';
+    src: url('playfairdisplay-italic-webfont.woff2') format('woff2'),
+         url('playfairdisplay-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'playfair_regular';
+    src: url('playfairdisplay-regular-webfont.woff2') format('woff2'),
+         url('playfairdisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

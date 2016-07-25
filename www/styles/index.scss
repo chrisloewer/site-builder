@@ -1,9 +1,11 @@
 // Colors
-$white-tp: rgba(255,255,255,0.8);
+$white-tp: rgba(255,255,255,0.9);
 $neutral: #DDDDDD;
 $blue-1: #137eb0;
-$blue-1-tp: rgba(19,126,176,1);
+$blue-1-tp: rgba(19,126,176,0.6);
+$medium-gray: #BBBBBB;
 $dark-gray: #414042;
+$black-gray: #323133;
 $off-black: #1A1A1A;
 $yellow: #FFED00;
 
@@ -12,6 +14,8 @@ body {
   padding: 0;
   margin: 0;
   color: $off-black;
+  font-family: playfair_regular;
+  line-height: 1.2;
 }
 
 h1 {
@@ -20,6 +24,19 @@ h1 {
   text-transform: uppercase;
   color: white;
   text-shadow: 0 0 9px #000000;
+}
+
+h2 {
+  font-family: montserratbold;
+  font-size: 42px;
+  text-transform: uppercase;
+  color: $dark-gray;
+}
+
+h4 {
+  font-family: montserratregular;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .em {
@@ -107,6 +124,8 @@ h1 {
   .vc-content {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
+    max-width: 90%;
     z-index: 5;
   }
 
@@ -114,15 +133,9 @@ h1 {
     display: inline-block;
     vertical-align: middle;
     min-width: 300px;
-    max-width: 80%;
+    max-width: 60%;
     padding: 50px;
-    background-color: transparentize(black, 0.5);
-  }
-
-  .vc-blurb-clear {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 80%;
+    background-color: $medium-gray;
   }
 }
 .vc-container::before {
@@ -134,9 +147,16 @@ h1 {
 
 .section {
   position: relative;
-  height: 500px;
+  height: 650px;
   text-align: center;
   background-color: #FFFFFF;
+}
+
+.column {
+  display: inline-block;
+  max-width: 40%;
+  text-align: left;
+  padding: 0 3%;
 }
 
 .skewed-bg {
@@ -155,6 +175,7 @@ h1 {
   top: 0;
   right: 0;
   transform: skewY(-3deg);
+  transform-origin: bottom right;
   z-index: 2;
 }
 
@@ -165,3 +186,35 @@ h1 {
   background-color: $blue-1-tp;
 }
 
+
+.footer {
+  height: 150px;
+  background-color: $dark-gray;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  padding: 20px 20%;
+  font-family: montserratultra_light;
+
+  .column {
+    text-align: left;
+    display: inline-block;
+    width: 25%;
+    padding: 0 3%;
+  }
+  .column:nth-of-type(n+2) {
+    text-align: center;
+  }
+  .column:last-of-type {
+    text-align: right;
+  }
+}
+
+.footer-banner {
+  background-color: $black-gray;
+  color: white;
+  text-align: right;
+  font-family: montserratultra_light;
+  font-size: 12px;
+  padding: 5px;
+}

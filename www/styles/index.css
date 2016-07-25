@@ -1,7 +1,9 @@
 body {
   padding: 0;
   margin: 0;
-  color: #1A1A1A; }
+  color: #1A1A1A;
+  font-family: playfair_regular;
+  line-height: 1.2; }
 
 h1 {
   font-family: montserratbold;
@@ -9,6 +11,17 @@ h1 {
   text-transform: uppercase;
   color: white;
   text-shadow: 0 0 9px #000000; }
+
+h2 {
+  font-family: montserratbold;
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #414042; }
+
+h4 {
+  font-family: montserratregular;
+  font-size: 16px;
+  text-transform: uppercase; }
 
 .em {
   color: #FFED00; }
@@ -19,7 +32,7 @@ h1 {
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 10px 0;
   display: inline-flex;
   justify-content: center;
@@ -77,18 +90,16 @@ h1 {
 .vc-container .vc-content {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
+  max-width: 90%;
   z-index: 5; }
 .vc-container .vc-blurb {
   display: inline-block;
   vertical-align: middle;
   min-width: 300px;
-  max-width: 80%;
+  max-width: 60%;
   padding: 50px;
-  background-color: rgba(0, 0, 0, 0.5); }
-.vc-container .vc-blurb-clear {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 80%; }
+  background-color: #BBBBBB; }
 
 .vc-container::before {
   content: '';
@@ -98,9 +109,15 @@ h1 {
 
 .section {
   position: relative;
-  height: 500px;
+  height: 650px;
   text-align: center;
   background-color: #FFFFFF; }
+
+.column {
+  display: inline-block;
+  max-width: 40%;
+  text-align: left;
+  padding: 0 3%; }
 
 .skewed-bg {
   height: 100%;
@@ -118,12 +135,39 @@ h1 {
   top: 0;
   right: 0;
   transform: skewY(-3deg);
+  transform-origin: bottom right;
   z-index: 2; }
 
 .blue-1 {
   background-color: #137eb0; }
 
 .blue-1-tp {
-  background-color: #137eb0; }
+  background-color: rgba(19, 126, 176, 0.6); }
+
+.footer {
+  height: 150px;
+  background-color: #414042;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  padding: 20px 20%;
+  font-family: montserratultra_light; }
+  .footer .column {
+    text-align: left;
+    display: inline-block;
+    width: 25%;
+    padding: 0 3%; }
+  .footer .column:nth-of-type(n+2) {
+    text-align: center; }
+  .footer .column:last-of-type {
+    text-align: right; }
+
+.footer-banner {
+  background-color: #323133;
+  color: white;
+  text-align: right;
+  font-family: montserratultra_light;
+  font-size: 12px;
+  padding: 5px; }
 
 /*# sourceMappingURL=index.css.map */

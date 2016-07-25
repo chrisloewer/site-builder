@@ -5,6 +5,7 @@
 function setScrollSpeed(element, speedMultiplier) {
   var ticking = false;
   var lastScrollY = 0;
+  doScroll();
 
   function updatePosition() {
     var translateValue = lastScrollY * speedMultiplier;
