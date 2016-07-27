@@ -10,12 +10,13 @@ $off-black: #1A1A1A;
 $yellow: #FFED00;
 
 
+
 body {
   padding: 0;
   margin: 0;
   color: $off-black;
   font-family: playfair_regular;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 h1 {
@@ -37,11 +38,20 @@ h4 {
   font-family: montserratregular;
   font-size: 16px;
   text-transform: uppercase;
+  color: $dark-gray;
 }
 
+// General Purpose
 .em {
   color: $yellow;
 }
+.blue-1 {
+  background-color: $blue-1;
+}
+.blue-1-tp {
+  background-color: $blue-1-tp;
+}
+
 
 .header {
   color: $dark-gray;
@@ -74,7 +84,6 @@ h4 {
     position: relative;
     cursor: pointer;
   }
-
   .link::before {
     position: absolute;
     top: 0;
@@ -106,9 +115,8 @@ h4 {
   text-align: center;
 }
 
-
+// Vertical Centered Container
 .vc-container {
-
   img.bg, video.bg {
     height: inherit;
     width: 100%;
@@ -125,15 +133,20 @@ h4 {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    max-width: 90%;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90%;
+    overflow: hidden;
     z-index: 5;
   }
 
   .vc-blurb {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
-    min-width: 300px;
     max-width: 60%;
+    max-height: 80%;
+    overflow: hidden;
     padding: 50px;
     background-color: $medium-gray;
   }
@@ -145,20 +158,13 @@ h4 {
   vertical-align: middle;
 }
 
+// Sections Containers for content
 .section {
   position: relative;
   height: 650px;
   text-align: center;
   background-color: #FFFFFF;
 }
-
-.column {
-  display: inline-block;
-  max-width: 40%;
-  text-align: left;
-  padding: 0 3%;
-}
-
 .skewed-bg {
   height: 100%;
   width: 100%;
@@ -179,11 +185,36 @@ h4 {
   z-index: 2;
 }
 
-.blue-1 {
-  background-color: $blue-1;
+// Generic fallback
+.column {
+  display: inline-block;
+  max-width: 40%;
+  padding: 0 3%;
 }
-.blue-1-tp {
-  background-color: $blue-1-tp;
+// Intended behavior
+.column-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  width: 100%;
+
+  .column {
+    padding: 10px 30px;
+    margin: 0 20px;
+    flex-basis: 10px;
+    flex-grow: 1;
+    text-align: left;
+  }
+  .column.center {
+    text-align: center;
+  }
+}
+
+// Content
+.services-icon {
+  width: 130px;
+  height: auto;
 }
 
 
@@ -195,6 +226,10 @@ h4 {
   z-index: 2;
   padding: 20px 20%;
   font-family: montserratultra_light;
+
+  h4 {
+    color: #FFFFFF;
+  }
 
   .column {
     text-align: left;
@@ -209,12 +244,11 @@ h4 {
     text-align: right;
   }
 }
-
 .footer-banner {
   background-color: $black-gray;
   color: white;
   text-align: right;
   font-family: montserratultra_light;
   font-size: 12px;
-  padding: 5px;
+  padding: 5px 10px;
 }

@@ -3,7 +3,7 @@ body {
   margin: 0;
   color: #1A1A1A;
   font-family: playfair_regular;
-  line-height: 1.2; }
+  line-height: 1.5; }
 
 h1 {
   font-family: montserratbold;
@@ -21,10 +21,17 @@ h2 {
 h4 {
   font-family: montserratregular;
   font-size: 16px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #414042; }
 
 .em {
   color: #FFED00; }
+
+.blue-1 {
+  background-color: #137eb0; }
+
+.blue-1-tp {
+  background-color: rgba(19, 126, 176, 0.6); }
 
 .header {
   color: #414042;
@@ -91,13 +98,18 @@ h4 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  max-width: 90%;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90%;
+  overflow: hidden;
   z-index: 5; }
 .vc-container .vc-blurb {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
-  min-width: 300px;
   max-width: 60%;
+  max-height: 80%;
+  overflow: hidden;
   padding: 50px;
   background-color: #BBBBBB; }
 
@@ -112,12 +124,6 @@ h4 {
   height: 650px;
   text-align: center;
   background-color: #FFFFFF; }
-
-.column {
-  display: inline-block;
-  max-width: 40%;
-  text-align: left;
-  padding: 0 3%; }
 
 .skewed-bg {
   height: 100%;
@@ -138,11 +144,29 @@ h4 {
   transform-origin: bottom right;
   z-index: 2; }
 
-.blue-1 {
-  background-color: #137eb0; }
+.column {
+  display: inline-block;
+  max-width: 40%;
+  padding: 0 3%; }
 
-.blue-1-tp {
-  background-color: rgba(19, 126, 176, 0.6); }
+.column-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  width: 100%; }
+  .column-container .column {
+    padding: 10px 30px;
+    margin: 0 20px;
+    flex-basis: 10px;
+    flex-grow: 1;
+    text-align: left; }
+  .column-container .column.center {
+    text-align: center; }
+
+.services-icon {
+  width: 130px;
+  height: auto; }
 
 .footer {
   height: 150px;
@@ -152,6 +176,8 @@ h4 {
   z-index: 2;
   padding: 20px 20%;
   font-family: montserratultra_light; }
+  .footer h4 {
+    color: #FFFFFF; }
   .footer .column {
     text-align: left;
     display: inline-block;
@@ -168,6 +194,6 @@ h4 {
   text-align: right;
   font-family: montserratultra_light;
   font-size: 12px;
-  padding: 5px; }
+  padding: 5px 10px; }
 
 /*# sourceMappingURL=index.css.map */
