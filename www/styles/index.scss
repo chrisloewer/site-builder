@@ -9,6 +9,10 @@ $black-gray: #323133;
 $off-black: #1A1A1A;
 $yellow: #FFED00;
 
+$section-height: 650px;
+$footer-height: 260px;
+$footer-body-height: 180px;
+
 
 
 body {
@@ -90,6 +94,9 @@ p {
   width: 100%;
   text-align: center;
 }
+.splash-fullscreen-fixed.vc-container::before {
+  height: 100%;
+}
 
 .splash-fullscreen {
   position: relative;
@@ -97,9 +104,13 @@ p {
   width: 100%;
   text-align: center;
 }
+.splash-fullscreen.vc-container::before {
+  height: 100%;
+}
 
 // Vertical Centered Container
 .vc-container {
+
   img.bg, video.bg {
     height: inherit;
     width: 100%;
@@ -121,6 +132,10 @@ p {
     overflow: hidden;
     margin: 50px 0;
     z-index: 5;
+
+    h2, h3 {
+      margin-top: 0;
+    }
   }
 
   .vc-blurb {
@@ -141,14 +156,14 @@ p {
 .vc-container::before {
   content: '';
   display: inline-block;
-  height: 100%;
+  height: $section-height;
   vertical-align: middle;
 }
 
 // Sections Containers for content
 .section {
   position: relative;
-  min-height: 650px;
+  min-height: $section-height;
   text-align: center;
   background-color: #FFFFFF;
 }
@@ -205,40 +220,54 @@ p {
   height: auto;
 }
 
-
 .footer {
-  min-height: 150px;
   background-color: $dark-gray;
   color: #FFFFFF;
   position: relative;
   z-index: 2;
-  padding: 20px;
+  overflow: hidden;
 
-
-  h4 {
-    color: #FFFFFF;
+  .footer-spacer {
+    height: $footer-height;
   }
+  .footer-body {
+    position: fixed;
+    bottom: 60px;
+    height: $footer-body-height;
+    width: 90%;
+    padding: 0 5%;
 
-  .column-container {
-    flex-direction: row;
-
-    .column:nth-of-type(n+2) {
-      display: none;
-      text-align: center;
+    h4 {
+      color: #FFFFFF;
     }
-    .column:last-of-type {
-      display: inline-block;
-      text-align: right;
+
+    .column-container {
+      flex-direction: row;
+      .column:nth-of-type(n+2) {
+        display: none;
+        text-align: center;
+      }
+      .column:last-of-type {
+        display: inline-block;
+        text-align: right;
+      }
     }
   }
 }
+
 .footer-banner {
+  width: 100%;
   background-color: $black-gray;
   color: white;
   text-align: right;
   font-family: montserratultra_light, sans-serif;
   font-size: 12px;
-  padding: 5px 10px;
+  position: absolute;
+  bottom: 0;
+
+  .content {
+    padding: 5px 10px;
+  }
 }
 
 
@@ -277,9 +306,13 @@ p {
   }
 
   .footer {
-    padding: 20px 15%;
-    .column-container .column:nth-of-type(n+2) {
-      display: inline-block;
+    .footer-body {
+      width: 86%;
+      padding: 0 7%;
+
+      .column-container .column:nth-of-type(n+2) {
+        display: inline-block;
+      }
     }
   }
 }
@@ -323,6 +356,13 @@ p {
       top: 100%;
       opacity: 1;
       height: 2px;
+    }
+  }
+
+  .footer {
+    .footer-body {
+      width: 80%;
+      padding: 0 10%;
     }
   }
 }
