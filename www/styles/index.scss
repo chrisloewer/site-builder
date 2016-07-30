@@ -29,7 +29,7 @@ body {
   color: $off-black;
   font-family: 'Noto Serif', serif;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 h1 {
@@ -58,6 +58,10 @@ p {
   text-align: justify;
 }
 
+p.center {
+  text-align: center;
+}
+
 // General Purpose
 .em {
   color: $yellow;
@@ -82,6 +86,7 @@ p {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  @include transition(all, 0.8s);
 
   .menu-item {
     display: none;
@@ -101,7 +106,7 @@ p {
   font-size: 14px;
   background-color: $white-tp-dark;
   padding: 4px 0;
-  @include transition(all, 0.5s);
+  @include transition(all, 0.8s);
 
   .menu-item {
     display: none;
@@ -242,7 +247,7 @@ p {
 
 // Content
 .services-icon {
-  width: 130px;
+  width: 100px;
   height: auto;
 }
 
@@ -301,10 +306,6 @@ p {
 // Tablet and bigger
 // --------------------------------------------------------------------------------------------------------------
 @media (min-width: 720px) {
-
-  body {
-    font-size: 18px;
-  }
 
   h1{
     font-size: 42px;
@@ -366,7 +367,7 @@ p {
 
   .header {
     .menu-item.logo-main {
-      width: 400px;
+      width: 360px;
     }
   }
   .header, .header.mini {
@@ -403,6 +404,11 @@ p {
     .link {
       font-size: 0.9em;
     }
+  }
+
+  .services-icon {
+    width: 130px;
+    height: auto;
   }
 
   .footer {

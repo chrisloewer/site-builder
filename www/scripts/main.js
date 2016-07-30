@@ -18,7 +18,6 @@ window.addEventListener('load', function () {
 // ------------------------------------ HEADER SCROLL RESIZE --------------------------------- //
 
 function headerController() {
-  console.log('header Controller');
   var breakpoint = 400;
   var currentPosition = window.scrollY;
 
