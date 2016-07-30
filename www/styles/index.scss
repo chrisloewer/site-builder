@@ -1,5 +1,6 @@
 // Colors
-$white-tp: rgba(255,255,255,0.9);
+$white-tp-light: rgba(255,255,255,0.4);
+$white-tp-dark: rgba(255,255,255,0.9);
 $neutral: #DDDDDD;
 $blue-1: #71B1CF;
 $blue-1-tp: rgba(19,126,176,0.6);
@@ -13,6 +14,13 @@ $section-height: 650px;
 $footer-height: 260px;
 $footer-body-height: 180px;
 
+@mixin transition($t, $time) {
+  -webkit-transition: $t $time;
+  -moz-transition: $t $time;
+  -ms-transition: $t $time;
+  -o-transition: $t $time;
+  transition: $t $time;
+}
 
 
 body {
@@ -65,11 +73,11 @@ p {
 
 .header {
   color: $dark-gray;
-  position: absolute;
+  background-color: $white-tp-light;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: $white-tp;
   padding: 10px 0;
   display: inline-flex;
   justify-content: center;
@@ -82,9 +90,27 @@ p {
 
   .menu-item.logo-main {
     display: inline-block;
-    width: 200px;
+    width: 220px;
     height:auto;
     cursor: pointer;
+    @include transition(all, 0.5s);
+  }
+}
+
+.header.mini {
+  font-size: 14px;
+  background-color: $white-tp-dark;
+  padding: 4px 0;
+  @include transition(all, 0.5s);
+
+  .menu-item {
+    display: none;
+    padding: 5px;
+  }
+
+  .menu-item.logo-main {
+    display: inline-block;
+    width: 150px;
   }
 }
 
@@ -273,8 +299,8 @@ p {
 
 
 // Tablet and bigger
-// -------------------------------------------------------------------
-@media (min-width: 750px) {
+// --------------------------------------------------------------------------------------------------------------
+@media (min-width: 720px) {
 
   body {
     font-size: 18px;
@@ -294,6 +320,16 @@ p {
       width: 300px;
     }
   }
+
+  .header.mini {
+    padding: 10px 0;
+
+    .menu-item.logo-main {
+      width: 200px;
+    }
+  }
+
+
 
   .column-container {
     flex-direction: row;
@@ -318,7 +354,7 @@ p {
 }
 
 // Laptops and bigger
-// -------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------
 @media (min-width: 1000px) {
 
   h1{
@@ -329,6 +365,11 @@ p {
   }
 
   .header {
+    .menu-item.logo-main {
+      width: 400px;
+    }
+  }
+  .header, .header.mini {
     .menu-item {
       display: inline;
       font-family: montserratregular;
@@ -356,6 +397,11 @@ p {
       top: 100%;
       opacity: 1;
       height: 2px;
+    }
+  }
+  .header.mini {
+    .link {
+      font-size: 0.9em;
     }
   }
 

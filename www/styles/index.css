@@ -39,11 +39,11 @@ p {
 
 .header {
   color: #414042;
-  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 10px 0;
   display: inline-flex;
   justify-content: center;
@@ -53,9 +53,30 @@ p {
     padding: 5px; }
   .header .menu-item.logo-main {
     display: inline-block;
-    width: 200px;
+    width: 220px;
     height: auto;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+
+.header.mini {
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4px 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+  .header.mini .menu-item {
+    display: none;
+    padding: 5px; }
+  .header.mini .menu-item.logo-main {
+    display: inline-block;
+    width: 150px; }
 
 .splash-fullscreen-fixed {
   position: fixed;
@@ -201,7 +222,7 @@ p {
   .footer-banner .content {
     padding: 5px 10px; }
 
-@media (min-width: 750px) {
+@media (min-width: 720px) {
   body {
     font-size: 18px; }
 
@@ -215,6 +236,11 @@ p {
     position: fixed; }
     .header .menu-item.logo-main {
       width: 300px; }
+
+  .header.mini {
+    padding: 10px 0; }
+    .header.mini .menu-item.logo-main {
+      width: 200px; }
 
   .column-container {
     flex-direction: row;
@@ -235,17 +261,20 @@ p {
   h2 {
     font-size: 42px; }
 
-  .header .menu-item {
+  .header .menu-item.logo-main {
+    width: 400px; }
+
+  .header .menu-item, .header.mini .menu-item {
     display: inline;
     font-family: montserratregular;
     font-size: 16px;
     margin: 0 15px;
     min-width: 100px;
     text-align: center; }
-  .header .link {
+  .header .link, .header.mini .link {
     position: relative;
     cursor: pointer; }
-  .header .link::before {
+  .header .link::before, .header.mini .link::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -254,10 +283,13 @@ p {
     background: #414042;
     content: '';
     transition: top 0.25s; }
-  .header .link:hover::before {
+  .header .link:hover::before, .header.mini .link:hover::before {
     top: 100%;
     opacity: 1;
     height: 2px; }
+
+  .header.mini .link {
+    font-size: 0.9em; }
 
   .footer .footer-body {
     width: 80%;
