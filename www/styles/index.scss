@@ -2,8 +2,7 @@
 $white-tp-light: rgba(255,255,255,0.4);
 $white-tp-dark: rgba(255,255,255,0.9);
 $neutral: #DDDDDD;
-$blue-1: #71B1CF;
-$blue-1-tp: rgba(19,126,176,0.6);
+$primary-1: #b1e1e6;
 $medium-gray: #BBBBBB;
 $dark-gray: #414042;
 $black-gray: #323133;
@@ -66,11 +65,8 @@ p.center {
 .em {
   color: $yellow;
 }
-.blue-1 {
-  background-color: $blue-1;
-}
-.blue-1-tp {
-  background-color: $blue-1-tp;
+.primary-1 {
+  background-color: $primary-1;
 }
 
 
@@ -293,7 +289,7 @@ p.center {
   text-align: right;
   font-family: montserratultra_light, sans-serif;
   font-size: 12px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 
   .content {

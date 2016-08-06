@@ -34,11 +34,8 @@ p.center {
 .em {
   color: #FFED00; }
 
-.blue-1 {
-  background-color: #71B1CF; }
-
-.blue-1-tp {
-  background-color: rgba(19, 126, 176, 0.6); }
+.primary-1 {
+  background-color: #b1e1e6; }
 
 .header {
   color: #414042;
@@ -225,7 +222,7 @@ p.center {
   text-align: right;
   font-family: montserratultra_light, sans-serif;
   font-size: 12px;
-  position: absolute;
+  position: fixed;
   bottom: 0; }
   .footer-banner .content {
     padding: 5px 10px; }
